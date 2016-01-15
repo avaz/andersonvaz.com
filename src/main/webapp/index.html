@@ -228,7 +228,7 @@
 					</div>
 					<footer>
 						<p id="copyright">
-							&copy; 2010-2014 Anderson Vaz
+							
 						</p>
 					</footer>
 				</article>
@@ -242,6 +242,10 @@
 		ga('create', 'UA-45182701-1', 'andersonvaz.com');
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
+		</script>
+		<script>
+		var copyright = document.getElementById("copyright");
+		copyright.innerHTML = "&copy; 2010-" + new Date().getFullYear() + " Anderson Vaz";
 		</script>
 	</body>
 
