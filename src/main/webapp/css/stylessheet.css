@@ -1,0 +1,11 @@
+.is-centered-h-v {
+    height: 50vh;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.work-in-progress {
+    font-family: 'Courier New', Courier, monospace;
+}
