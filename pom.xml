@@ -3,17 +3,16 @@
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
 
     <groupId>com.avaz</groupId>
     <artifactId>andersonvaz_com</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <appengine.app.version>1</appengine.app.version>
-        <appengine.target.version>2.2.0</appengine.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <appengine.target.version>1.9.80</appengine.target.version>
+        <app.deploy.projectId>avazdev</app.deploy.projectId>
+        <app.deploy.version>4</app.deploy.version>
     </properties>
 
     <dependencies>
@@ -22,31 +21,6 @@
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>${appengine.target.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-
-        <!-- Test Dependencies -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.10</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.9.0</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -60,7 +34,6 @@
                     <release>11</release>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -77,11 +50,10 @@
                     </webResources>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
-                <version>${appengine.target.version}</version>
+                <version>2.2.0</version>
                 <configuration>
                     <enableJarClasses>false</enableJarClasses>
                     <host>0.0.0.0</host>

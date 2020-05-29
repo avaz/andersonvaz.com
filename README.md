@@ -1,14 +1,5 @@
 # Personal Web Site
 
-# Pre requirement
-
-Java 11
-To install on Mac with homebrew
-
-```
-brew install java11
-```
-
 # Build
 
 ```
@@ -18,6 +9,12 @@ brew install java11
 # Run
 ```
 ./mvnw appengine:run
+```
+
+# Dev
+```
+cd src/main/webapp
+npx http-server -c-1 .
 ```
 
 # Deploy
